@@ -556,6 +556,12 @@ a {
   right: 0;
 }
 
+@media (max-width: 767.98px) {
+  .main.absolute {
+    position: relative;
+  }
+}
+
 #filter_table {
   padding-top: 35px;
   display: -webkit-box;
@@ -575,22 +581,31 @@ a {
   display: inline-block;
   position: relative;
   min-width: 200px;
-  margin: 7px 15px;
   font-size: 0.8em;
 }
 
 #filter_table select {
-  text-transform: uppercase;
   height: 50px;
   width: 100%;
+  background-color: #dddddd;
+  border: 2px solid #bebebe;
+  outline: none;
+  border-radius: 10px;
+}
+
+@media (min-width: 576px) {
+  #filter_table .select_container {
+    margin: 7px 15px;
+  }
 }
 
 @media (max-width: 575.98px) {
   #filter_table {
     display: block;
+    margin-top: 100px;
   }
   #filter_table .select_container {
     width: 100%;
-    padding-bottom: 15px;
+    padding: 7px 0;
   }
 }

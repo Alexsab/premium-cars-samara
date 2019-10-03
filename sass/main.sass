@@ -132,6 +132,10 @@ a
 		bottom: 50px
 		left: 0
 		right: 0
+	+media-breakpoint-down(sm)
+		&.absolute
+			position: relative
+
 #filter_table
 	padding-top: 35px
 	display: flex
@@ -141,17 +145,22 @@ a
 		display: inline-block
 		position: relative
 		min-width: 200px
-		margin: 7px 15px
 		font-size: 0.8em
 	select,
-		text-transform: uppercase
+		// text-transform: uppercase
 		height: 50px
 		width: 100%
+		background-color: #dddddd
+		border: 2px solid #bebebe
+		outline: none
+		border-radius: 10px
 
-	+media-breakpoint-down(sm)
-		select
+	+media-breakpoint-up(sm)
+		.select_container
+			margin: 7px 15px
 	+media-breakpoint-down(xs)
 		display: block
+		margin-top: 100px
 		.select_container
 			width: 100%
-			padding-bottom: 15px
+			padding: 7px 0
