@@ -1,5 +1,5 @@
-@import vars
 @import fonts
+@import vars
 @import libs
 
 ::placeholder
@@ -21,11 +21,20 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: 'Roboto', sans-serif
+	font-family: $font-family
 	overflow-x: hidden
-	color: $text
+	color: $palette-fg
+	background: top center no-repeat / contain url(/img/@2x/im.jpg) $palette-bg
+	min-height: 100vh
+	+media-breakpoint-up(lg)
+		background-size: cover
+		background-position: center
+	+media-breakpoint-down(md)
+		background-position: center
 
-// Custom Sass / Remove before use
+a
+	color: $palette-fg
+
 
 .container
 	max-width: 700px
@@ -54,9 +63,95 @@ body
 		display: block
 		> div
 			padding: $gutter/2 0
-	
-.example-img
+
+.img100w
 	width: 100%
 
 .parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
 	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
+
+.header
+	width: 100%
+	position: relative
+	
+	&-top
+		margin-bottom: 2em	
+		width: 100%
+		height: 110px
+		display: table
+		position: relative
+
+		&-logo
+			display: table-cell
+			vertical-align: middle
+			padding-left: 40px
+			.img-logo
+				max-width: 200px
+
+		&-contact
+			display: table-cell
+			vertical-align: middle
+			padding-right: 40px
+			text-align: right
+			address
+				margin-bottom: 0
+		+media-breakpoint-down(sm)
+			padding-top: 20px
+			&-logo,
+			&-contact
+				text-align: center
+				display: block
+				width: 100%
+				padding: 0 20px 10px
+				box-sizing: border-box
+		+media-breakpoint-down(xs)
+			&-contact
+				font-size: 0.8em
+
+	&-name,
+	&-desc
+		text-align: center
+		text-transform: uppercase
+	&-name > span
+		background: linear-gradient(#ffffff, #ffffff $font-line-pos, #7c8491 $font-line-pos+2%, #abb6ca $font-line-pos+10%);
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+	&-desc
+		font
+
+
+.content
+	width: 90vw
+	max-width: calc(100% - 4em)
+	margin: 0 auto
+
+.main	
+	&.absolute
+		position: absolute
+		bottom: 50px
+		left: 0
+		right: 0
+#filter_table
+	padding-top: 35px
+	display: flex
+	justify-content: space-evenly
+	flex-wrap: wrap
+	.select_container
+		display: inline-block
+		position: relative
+		min-width: 200px
+		margin: 7px 15px
+		font-size: 0.8em
+	select,
+		text-transform: uppercase
+		height: 50px
+		width: 100%
+
+	+media-breakpoint-down(sm)
+		select
+	+media-breakpoint-down(xs)
+		display: block
+		.select_container
+			width: 100%
+			padding-bottom: 15px

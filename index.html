@@ -34,61 +34,62 @@
 	
 	<meta name="theme-color" content="#000000">
 	<link rel="stylesheet" href="css/styles.min.css">
-	
+
 
 </head>
 
 <body>
 	
-	<!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-	<!-- Custom HTML / Remove before use -->
-
-	<div class="container">
-
-		<div class="parent"> <!-- Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/ -->
-			<img class="lazy img-responsive example-img"
-			src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-			data-src="img/@1x/preview.jpg"
-			data-srcset="img/@1x/preview.jpg 1x, img/@2x/preview.jpg 2x"
-			alt="Start HTML5 Template">
+	<!-- Header -->
+	<header class="header" itemscope itemtype="http://schema.org/Organization">
+		<div class="header-top">
+			<div class="header-top-logo">
+				<img class="lazy img-logo" itemprop="logo"
+				src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+				data-src="img/@1x/logo-SA-white-tiny.png"
+				data-srcset="img/@1x/logo-SA-white-tiny.png 1x, img/@2x/logo-SA-white-tiny.png 2x"
+				alt="Самарские автомобили">
+			</div>
+			<div class="header-top-contact">
+				<address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Самара</span>, <span itemprop="streetAddress">Московское шоссе, 262</span></address>
+				<a href="tel:+78469936677"><span itemprop="telephone">+7 (846) 993 66 77</span></a>
+			</div>
 		</div>
-		<br>
-		<h2>Welcome to startup HTML template OptimizedHTML 5!</h2>
-		<p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. <em>Ad distinctio animi</em>, dolorum eaque praesentium unde aliquid, mollitia itaque voluptate quos modi et incidunt tempora fugiat voluptatum quia esse dolor repellat.</p>
-		<br>
-		<div class="example-grid">
-			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quo vero molestias, esse doloribus corrupti, nemo minus ullam tempore tenetur magni aut quos soluta sit adipisci eius expedita amet non.</div>
-			<div>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</div>
+		<div class="content">
+			<h1 class="header-name" itemprop="name"><span>Premium</span> <span>Cars</span> <span>Samara</span></h1>
+			<p class="header-desc">Автомобили с&nbsp;пробегом</p>
 		</div>
+	</header>
 
-	</div>
+	<!-- Intro -->
+	<section id="intro" class="main absolute">
+		<div class="content">
+			<form id="filter_table">
+				<div class="select_container">
+					<select name="models">
+						<option value="">Каталог</option>
+						<option value="avto1">Модель 1</option>
+						<option value="avto2">Модель 2</option>
+						<option value="avto3">Модель 3</option>
+						<option value="avto4">Модель 4</option>
+						<option value="avto5">Модель 5</option>
+						<option value="avto6">Модель 6</option>
+						<option value="avto7">Модель 7</option>
+					</select>
+				</div>
+				<div class="select_container">
+					<select name="price">
+						<option value="">Стоимость</option>
+					</select>
+				</div>
+				<div class="select_container">
+					<select name="year">
+						<option value="">Год выпуска</option>
+					</select>
+				</div>
+			</form>
+		</div>
+	</section>
 
 	<script src="js/scripts.min.js"></script>
 
