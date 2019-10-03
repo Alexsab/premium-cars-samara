@@ -403,7 +403,7 @@ body {
   font-family: "Jaguar", "sans-serif";
   overflow-x: hidden;
   color: #ffffff;
-  background: top center no-repeat/contain url(/img/@2x/im.jpg) #000000;
+  background: top center no-repeat/contain url(../img/@2x/im.jpg) #000000;
   min-height: 100vh;
 }
 
