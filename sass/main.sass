@@ -26,7 +26,7 @@ body
 	color: $palette-fg
 	background: top center no-repeat / contain url(../img/@2x/im.jpg) $palette-bg
 	min-height: 100vh
-	+media-breakpoint-up(lg)
+	+media-breakpoint-up(sm)
 		background-size: cover
 		background-position: center
 	+media-breakpoint-down(md)
@@ -127,8 +127,9 @@ a
 	margin: 0 auto
 
 .main	
+	margin-top: 100px
 	&.absolute
-		position: absolute
+		position: relative
 		bottom: 50px
 		left: 0
 		right: 0
@@ -160,7 +161,6 @@ a
 			margin: 7px 15px
 	+media-breakpoint-down(xs)
 		display: block
-		margin-top: 100px
 		.select_container
 			width: 100%
 			padding: 7px 0

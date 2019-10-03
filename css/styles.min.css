@@ -407,7 +407,7 @@ body {
   min-height: 100vh;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   body {
     background-size: cover;
     background-position: center;
@@ -549,8 +549,12 @@ a {
   margin: 0 auto;
 }
 
+.main {
+  margin-top: 100px;
+}
+
 .main.absolute {
-  position: absolute;
+  position: relative;
   bottom: 50px;
   left: 0;
   right: 0;
@@ -602,7 +606,6 @@ a {
 @media (max-width: 575.98px) {
   #filter_table {
     display: block;
-    margin-top: 100px;
   }
   #filter_table .select_container {
     width: 100%;
