@@ -16,6 +16,9 @@ input, textarea
 	&:required:valid
 		border-color: green
 
+html
+	font-size: 62.5%
+
 body
 	font-size: 16px
 	min-width: 320px
@@ -23,7 +26,6 @@ body
 	line-height: 1.65
 	font-family: $font-family
 	overflow-x: hidden
-	color: $palette-fg
 	background: top center no-repeat / contain url(../img/@2x/im.jpg) $palette-bg
 	min-height: 100vh
 	+media-breakpoint-up(sm)
@@ -74,6 +76,7 @@ a
 .header
 	width: 100%
 	position: relative
+	color: $palette-fg
 	
 	&-top
 		margin-bottom: 2em	
@@ -138,7 +141,7 @@ a
 			position: relative
 
 #filter_table
-	padding-top: 35px
+	padding: 35px 0
 	display: flex
 	justify-content: space-evenly
 	flex-wrap: wrap
@@ -164,3 +167,6 @@ a
 		.select_container
 			width: 100%
 			padding: 7px 0
+
+.kdx-ui-list__box
+	font-family: infiniti, sans-serif
