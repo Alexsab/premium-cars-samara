@@ -29,10 +29,10 @@ body
 	background: top center no-repeat / contain url(../img/@2x/im.jpg) $palette-bg
 	min-height: 100vh
 	+media-breakpoint-up(sm)
-		background-size: cover
-		background-position: center
+		background-size: contain
+		background-position: top center
 	+media-breakpoint-down(md)
-		background-position: center
+		background-position: top center
 
 a
 	color: $palette-fg
@@ -72,6 +72,8 @@ a
 .parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
 	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
 
+.hide
+	display: none;
 
 .header
 	width: 100%
@@ -131,6 +133,8 @@ a
 
 .main	
 	margin-top: 100px
+	+media-breakpoint-up(sm)
+		margin-top: 200px
 	&.absolute
 		position: relative
 		bottom: 50px
@@ -142,6 +146,9 @@ a
 
 #filter_table
 	padding: 35px 0
+	margin-bottom: 50px
+	+media-breakpoint-up(sm)
+		margin-bottom: 100px
 	display: flex
 	justify-content: space-evenly
 	flex-wrap: wrap
@@ -151,6 +158,7 @@ a
 		min-width: 200px
 		font-size: 0.8em
 	select,
+	button
 		// text-transform: uppercase
 		height: 50px
 		width: 100%
