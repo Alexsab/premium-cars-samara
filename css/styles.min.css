@@ -1592,7 +1592,7 @@
 }
 
 .item-slider-item:hover::after {
-    background-color: #0af!important
+    background-color: #9e1b32!important
 }
 
 .item-slider-item::after {
@@ -1620,7 +1620,7 @@
 }
 
 .item-slider:not(:hover) .item-slider-item:first-child::after {
-    background-color: #0af
+    background-color: #9e1b32
 }
 
 .item-slider-more {
