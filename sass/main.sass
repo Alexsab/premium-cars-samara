@@ -26,13 +26,30 @@ body
 	line-height: 1.65
 	font-family: $font-family
 	overflow-x: hidden
-	background: top center no-repeat / contain url(../img/@2x/im.jpg) $palette-bg
+	background: center 100px no-repeat url(../img/@2x/im-wide.jpg) $palette-bg
+	background-size: contain
 	min-height: 100vh
 	+media-breakpoint-up(sm)
 		background-size: contain
-		background-position: top center
+		background-position: center 100px
 	+media-breakpoint-down(md)
-		background-position: top center
+
+@media(min-width: 390px)
+	body
+		background-position-y: 80px
+@media(min-width: 442px)
+	body
+		background-position-y: 240px
+@media(min-width: 768px)
+	body
+		background-position-y: 140px
+@media(min-width: 1200px)
+	body
+		background-position-y: 80px
+@media(min-width: 1600px)
+	body
+		background-position-y: 0
+
 
 a
 	color: $palette-fg
@@ -73,7 +90,7 @@ a
 	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
 
 .hide
-	display: none;
+	display: none
 
 .header
 	width: 100%
@@ -125,6 +142,10 @@ a
 	&-desc
 		font
 
+@media(max-width: 337px)
+	address
+		font-size: 0.9em
+
 
 .content
 	width: 90vw
@@ -166,6 +187,16 @@ a
 		border: 2px solid #bebebe
 		outline: none
 		border-radius: 10px
+
+		outline: none
+		max-width: 100%
+		appearance: none
+		cursor: pointer
+		// height: 60px
+
+	select
+		background: #dddddd url(../img/arrow-down.png) right 20px center no-repeat !important
+
 
 	+media-breakpoint-up(sm)
 		.select_container

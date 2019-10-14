@@ -207,7 +207,8 @@
     display: block;
     margin: 0;
     position: relative;
-    padding-top: 56.25%
+    /*padding-top: 56.25%*/
+    height: 100%;
 }
 
 .kdx-ui-card__image-img {
@@ -1447,7 +1448,8 @@
     /*width: 208px;*/
     /*height: 156px;*/
     width: 100%;
-    padding-top: 56.25%;
+    /*padding-top: 56.25%;*/
+    padding-top: 75%;
     overflow: hidden;
     /*-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.1);*/
     /*box-shadow: 0 0 0 1px rgba(0,0,0,.1);*/
@@ -1561,7 +1563,7 @@
 .item-photo {
     position: relative;
     min-width: 208px;
-    max-height: 156px;
+    /*max-height: 156px;*/
     overflow: visible;
     /*margin: 8px 3px 0 7px;*/
     padding: 0;
@@ -1572,12 +1574,12 @@
 }
 
 .item-photo_extended {
-    max-height: 236px
+    /*max-height: 236px*/
 }
 
 .item-photo .photo-wrapper {
     display: inline-block;
-    max-height: 105px;
+    /*max-height: 105px;*/
     border: 0;
     position: relative
 }
@@ -1587,7 +1589,7 @@
     width: 100%;
     height: 100%;
     min-height: 156px;
-    max-height: none;
+    /*max-height: none;*/
     border: 0;
     background-image: url(https://www.avito.st/s/cc/resources/215d2a4128e5.svg);
     background-size: cover

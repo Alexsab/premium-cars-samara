@@ -207,7 +207,8 @@
     display: block;
     margin: 0;
     position: relative;
-    padding-top: 56.25%
+    /*padding-top: 56.25%*/
+    height: 100%;
 }
 
 .kdx-ui-card__image-img {
@@ -1524,7 +1525,8 @@
     /*width: 208px;*/
     /*height: 156px;*/
     width: 100%;
-    padding-top: 56.25%;
+    /*padding-top: 56.25%;*/
+    padding-top: 75%;
     overflow: hidden;
     /*-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.1);*/
     /*box-shadow: 0 0 0 1px rgba(0,0,0,.1);*/
@@ -1648,7 +1650,7 @@
 .item-photo {
     position: relative;
     min-width: 208px;
-    max-height: 156px;
+    /*max-height: 156px;*/
     overflow: visible;
     /*margin: 8px 3px 0 7px;*/
     padding: 0;
@@ -1659,12 +1661,12 @@
 }
 
 .item-photo_extended {
-    max-height: 236px
+    /*max-height: 236px*/
 }
 
 .item-photo .photo-wrapper {
     display: inline-block;
-    max-height: 105px;
+    /*max-height: 105px;*/
     border: 0;
     position: relative
 }
@@ -1674,7 +1676,7 @@
     width: 100%;
     height: 100%;
     min-height: 156px;
-    max-height: none;
+    /*max-height: none;*/
     border: 0;
     background-image: url(https://www.avito.st/s/cc/resources/215d2a4128e5.svg);
     background-size: cover
@@ -2161,20 +2163,45 @@ body {
   line-height: 1.65;
   font-family: "Jaguar", "sans-serif";
   overflow-x: hidden;
-  background: top center no-repeat/contain url(../img/@2x/im.jpg) #000000;
+  background: center 100px no-repeat url(../img/@2x/im-wide.jpg) #000000;
+  background-size: contain;
   min-height: 100vh;
 }
 
 @media (min-width: 576px) {
   body {
     background-size: contain;
-    background-position: top center;
+    background-position: center 100px;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (min-width: 390px) {
   body {
-    background-position: top center;
+    background-position-y: 80px;
+  }
+}
+
+@media (min-width: 442px) {
+  body {
+    background-position-y: 240px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background-position-y: 140px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-position-y: 80px;
+  }
+}
+
+@media (min-width: 1600px) {
+  body {
+    background-position-y: 0;
   }
 }
 
@@ -2306,6 +2333,12 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 337px) {
+  address {
+    font-size: 0.9em;
+  }
+}
+
 .content {
   width: 90vw;
   max-width: calc(100% - 4em);
@@ -2372,6 +2405,16 @@ a {
   border: 2px solid #bebebe;
   outline: none;
   border-radius: 10px;
+  outline: none;
+  max-width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+#filter_table select {
+  background: #dddddd url(../img/arrow-down.png) right 20px center no-repeat !important;
 }
 
 @media (min-width: 576px) {
