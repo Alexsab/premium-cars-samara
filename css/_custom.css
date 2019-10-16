@@ -321,7 +321,10 @@
 
 .kdx-ui-card__link:active,
 .kdx-ui-card__link:focus,
-.kdx-ui-card__link:hover {
+.kdx-ui-card__link:hover,
+.kdx-ui-location:active,
+.kdx-ui-location:focus,
+.kdx-ui-location:hover {
     text-decoration: none
 }
 
@@ -1402,6 +1405,112 @@
         -ms-flex: 0 1 23%;
         flex: 0 1 23%
     }
+}
+
+.form-element {
+    margin-bottom: 2rem
+}
+
+.form-element__title {
+    padding-bottom: .8rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block
+}
+
+.has-error .form-element__title {
+    color: #c82e2d
+}
+
+.form-element__title:before {
+    content: "\A0"
+}
+
+.form-element__field {
+    min-height: 4.4rem
+}
+
+.input {
+    margin-bottom: 2rem;
+    display: inline-block;
+    width: 100%
+}
+
+.input__title {
+    padding-bottom: .8rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block
+}
+
+.has-error .input__title {
+    color: #c82e2d
+}
+
+.input__field {
+    min-height: 4.4rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: infiniti,sans-serif;
+    font-size: 16px;
+    color: #999;
+    border: 1px solid #d9d9d9;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+@media screen and (min-width: 60em) {
+    .input__field {
+        font-size:1.2rem
+    }
+}
+
+.has-error .input__field {
+    color: #000;
+    border-color: #c82e2d;
+    background: #ffe5e5
+}
+
+.input__field:focus,.input__field:hover {
+    border-color: #000;
+    color: #000
+}
+
+.input__field[disabled],.input__field[disabled]:active,.input__field[disabled]:focus,.input__field[disabled]:hover {
+    background: #e5e5e5;
+    border-color: #ccc
+}
+
+.input:hover .input__field {
+    border-color: #000
+}
+
+.input:hover .input__field.disabled,.input:hover .input__field[disabled] {
+    border-color: #ccc
+}
+
+.input__group {
+    position: relative
+}
+
+.input__field {
+    line-height: 2.2rem;
+    border-radius: 0;
+    padding: .7rem 1.5rem;
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.input__field:focus {
+    outline: none
 }
 /**
  * infinitisamara.ru end
