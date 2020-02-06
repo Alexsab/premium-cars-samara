@@ -60,6 +60,12 @@ typings/
 # next.js build output
 .next
 
+mail.php
+
 /**/Thumbs.db
 /**/*.DS_Store
 sftp-config.json
+/uploads/
+/images/*
+!/images/item.php
+!/images/picture.php

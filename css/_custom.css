@@ -569,7 +569,8 @@
 }
 
 .kdx-ui-card__layer_h_large {
-    margin-bottom: .8rem
+    margin-bottom: .8rem;
+    height: 4.5rem;
 }
 
 .kdx-ui-card__layer_description {

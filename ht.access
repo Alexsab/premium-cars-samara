@@ -1,3 +1,18 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+RewriteEngine On
+RewriteBase /
+
+# Rewrite secure requests properly to prevent SSL cert warnings, e.g. prevent 
+# https://www.domain.com when your cert only allows https://secure.domain.com
+RewriteCond %{SERVER_PORT} !^443
+RewriteRule (.*) https://premiumcars.probegcentr.ru/$1 [R=301,L]
+
+</IfModule>
+
 <ifModule mod_expires.c>
 
 # Add correct content-type for fonts & SVG

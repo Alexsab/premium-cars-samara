@@ -1,76 +1,117 @@
+
 // $(function() {
 document.addEventListener("DOMContentLoaded", function() {
-
+	
 	var $$$ = function(name) { return document.querySelector(name) },
 		$$ = function(name) { return document.querySelectorAll(name) },
-		cars = [{"name":"Mercedes-Benz GL-класс","year":"2014","price":"2439000","images":["6182947682","6182947609","6182947629","6182947665","6182947684"],"params":"83 677 км, 3.0  AT  (249 л.с.) , внедорожник, полный, дизель"},{"name":"Infiniti QX80","year":"2018","price":"4955000","images":["6020795950","6020779430","6020779743","6020781054","6020779567"],"params":"5.6  AT  (405 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX80","year":"2019","price":"4755000","images":["6173877478","6173877673","6173876578","6173880856","6173878741"],"params":"5.6  AT  (405 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX60","year":"2018","price":"2875000","images":["5999858251","5999758892","5999759360","5999759440","5999755902"],"params":"3.5  CVT  (262 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX50","year":"2019","price":"3090000","images":["5933901798","5933906546","5933906542","5933906559","5933903147"],"params":"2.0  CVT  (249 л.с.) , внедорожник, полный, бензин"},{"name":"SsangYong Actyon","year":"2013","price":"630000","images":["6011995756","6011993626","6011996036","6011995909","6012024795"],"params":"67 218 км, 2.0  AT  (149 л.с.) , внедорожник, полный, бензин"},{"name":"Hyundai Elantra","year":"2016","price":"759000","images":["6012111498","6012109319","6012111550","6012109977","6012111564"],"params":"96 212 км, 1.6  AT  (128 л.с.) , седан, передний, бензин"},{"name":"Infiniti QX50","year":"2019","price":"3030000","images":["5933957088","5933955800","5933954405","5933957015","5933956976"],"params":"2.0  CVT  (249 л.с.) , внедорожник, полный, бензин"},{"name":"Peugeot 408","year":"2014","price":"459000","images":["6010792707","6010792592","6010792668","6010792635","6010792346"],"params":"62 000 км, 1.6  AT  (120 л.с.) , седан, передний, бензин"},{"name":"Mercedes-Benz Vito","year":"2017","price":"4650000","images":["6146558855","6146557290","6146557602","6146560674","6146559942"],"params":"26 950 км, 2.1  AT  (190 л.с.) , минивэн, полный, дизель"},{"name":"Infiniti JX","year":"2012","price":"1600000","images":["5998746688","5998747178","5998752923","5998746597","5998746671"],"params":"63 000 км, 3.5  CVT  (262 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX50","year":"2019","price":"3470000","images":["6052466413","6052467110","6052469032","6052468478","6052466877"],"params":"2.0  CVT  (249 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX60","year":"2018","price":"3380000","images":["5978565084","5978553477","5978565096","5978565079","5978558238"],"params":"1 070 км, 2.5  CVT  (250 л.с.) , внедорожник, полный, гибрид"},{"name":"BMW X1","year":"2014","price":"970000","images":["6117854374","6117854470","6117855393","6117854253","6117854289"],"params":"77 100 км, 2.0  AT  (184 л.с.) , внедорожник, полный, дизель"},{"name":"Toyota Land Cruiser","year":"2015","price":"3350000","images":["6182812019","6182812029","6182812034","6182812124","6182812127"],"params":"137 000 км, 4.5  AT  (249 л.с.) , внедорожник, полный, дизель"},{"name":"BMW X3","year":"2014","price":"1299000","images":["5950340383","5950343671","5950344211","5950344398","5950345039"],"params":"110 000 км, 2.0  AT  (184 л.с.) , внедорожник, полный, бензин"},{"name":"Mercedes-Benz GLC-класс","year":"2016","price":"2200000","images":["6078570745","6078570783","6078570638","6078570778","6078570680"],"params":"40 543 км, 2.0  AT  (211 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX50","year":"2018","price":"2709000","images":["5933619687","5933619794","5933618224","5933619487","5933618271"],"params":"2.0  CVT  (249 л.с.) , внедорожник, полный, бензин"},{"name":"Nissan Murano","year":"2014","price":"1150000","images":["5948502868","5948503017","5948503039","5948502932","5948503007"],"params":"78 000 км, 3.5  CVT  (249 л.с.) , внедорожник, полный, бензин"},{"name":"Volkswagen Touareg","year":"2013","price":"1740000","images":["6173520928","6173520621","6173522345","6173524901","6173522412"],"params":"130 600 км, 3.6  AT  (249 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX80","year":"2017","price":"3950000","images":["6057183280","6057186235","6057192282","6057183250","6057185623"],"params":"2 000 км, 5.6  AT  (405 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX60","year":"2018","price":"3155000","images":["5934210376","5934222594","5934209143","5934222595","5934209804"],"params":"3.5  CVT  (262 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX50","year":"2018","price":"3480000","images":["5934057678","5934057787","5934058731","5934058236","5934058714"],"params":"2.0  CVT  (249 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX50","year":"2018","price":"3950000","images":["5934083256","5934083003","5934083531","5934084152","5934084770"],"params":"2.0  CVT  (249 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX50","year":"2019","price":"3195000","images":["5934026797","5934026799","5934023150","5934026793","5934021294"],"params":"2.0  CVT  (249 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti JX","year":"2013","price":"1199000","images":["5930494684","5930495689","5930495933","5930496110","5930496430"],"params":"119 000 км, 3.5  CVT  (262 л.с.) , внедорожник, полный, бензин"},{"name":"Infiniti QX70","year":"2014","price":"1649000","images":["5930804964","5930805587","5930806196","5930806438","5930807859"],"params":"111 700 км, 3.0  AT  (238 л.с.) , внедорожник, полный, дизель"}],
 		models = [],
 		prices = [],
 		years = [],
 		scrolltop = $$$('#scrolltop');
 
-	// сортируем машины по возрастанию цены
-	cars.sort(function(a, b){ return a.price - b.price; });
-
-	// просто пример
-	$$('.kdx-ui-card__carousel-cursor-detector').forEach(function(element) {
-		element.addEventListener('click', function(t) {
-
-		});
-	});
 
 	// делаем кнопку промотки наверх
 	window.onscroll = function() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-	    scrolltop.style.display = "block";
-	  } else {
-	    scrolltop.style.display = "none";
-	  }
+		if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+		    scrolltop.style.display = "block";
+		} else {
+		    scrolltop.style.display = "none";
+		}
 	};
 	scrolltop.addEventListener('click', function(t) {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	});
 
-	/* create cars list start */
-	var i = 0,
-		original = $$$('.kdx-ui-list__cell');
-	function duplicate(imgArr = ["6182947682","6182947609","6182947629","6182947665","6182947684"], name = "Mercedes-Benz GL-класс", year = "2014", price = "2 439 000", params = "") {
-		var clone = original.cloneNode(true); // "deep" clone
-		clone.id = "duplicater" + ++i;
-		clone.classList.remove('hide');
-		clone.querySelector('.item-slider').setAttribute('data-fancybox-trigger','gallery'+imgArr[0]);
-		clone.querySelector('.replace-name').innerText = name;
-		clone.querySelector('.replace-year').innerText = year;
-		clone.querySelector('.replace-params').innerText = params;
-		var priceFormated = new Intl.NumberFormat('ru', {}).format(price);
-		clone.querySelector('.replace-price').innerHTML = '<span class="kdx-ui-card__before-price"></span>\
-			 ' + priceFormated + '\
-			<span class="kdx-ui-card__current-price-currency "> ₽</span>';
-		clone.querySelector('.replace-oldprice').innerHTML = '<span class="kdx-ui-card__before-price"></span>\
-			 ' + new Intl.NumberFormat('ru', {}).format(parseInt(price)*1.1) + '\
-			<span class="kdx-ui-card__current-price-currency "> ₽</span>';
-		var j = 0;
-		clone.querySelectorAll('.kdx-ui-card__image-picture').forEach(function(element) {
-			element.children[0].setAttribute('srcset','https://98.img.avito.st/208x156/'+imgArr[j]+'.jpg 1x, https://98.img.avito.st/640x480/'+imgArr[j++]+'.jpg 2x');
-			element.children[1].setAttribute('alt',name);
-			element.children[1].setAttribute('title',name);
-		});
-		// or clone.id = ""; if the divs don't need an ID
-		original.parentNode.appendChild(clone);
+	/* create cars list with js start deprecated */
+	if(window.cars) {
+		var cars = window.cars;
+		// сортируем машины по возрастанию цены
+		cars.sort(function(a, b){ return a.price - b.price; });
+		var i = 0,
+			original = $$$('.kdx-ui-list__cell');
+		function duplicate(element) {
+			// console.log([element.images, element.name, element.year, element.price, element.params, element.id, element.countImages]);
+			// console.log([element.countImages=="", element.countImages==null]);
+			// console.log([element.images[0], element.images[1]]);
+			var clone = original.cloneNode(true); // "deep" clone
+			clone.id = "duplicater" + ++i;
+			clone.classList.remove('hide');
+			clone.querySelector('.item-slider').setAttribute('data-fancybox-trigger','gallery'+element.id);
+			clone.querySelector('.replace-name').innerText = element.name;
+			clone.querySelector('.replace-year').innerText = element.year;
+			clone.querySelector('.replace-params').innerText = element.params;
+			clone.querySelector('.item-slider-more').innerHTML = (element.countImages!="") ? 'Ещё<br>'+(element.countImages-5)+' фото' : 'Ещё<br>фото';
+			
+			var priceFormated = new Intl.NumberFormat('ru', {}).format(element.price);
+			clone.querySelector('.replace-price').innerHTML = '<span class="kdx-ui-card__before-price"></span>\
+				 ' + priceFormated + '\
+				<span class="kdx-ui-card__current-price-currency "> ₽</span>';
+			clone.querySelector('.replace-oldprice').innerHTML = '<span class="kdx-ui-card__before-price"></span>\
+				 ' + new Intl.NumberFormat('ru', {}).format(parseInt(element.price)*1.1) + '\
+				<span class="kdx-ui-card__current-price-currency "> ₽</span>';
+			
+			var j = 0;
+			clone.querySelectorAll('.kdx-ui-card__image-picture').forEach(function(cloneelem) {
+				if(element.countImages!="") {
+					cloneelem.children[0].setAttribute('srcset','\
+						/uploads/'+element.id+'/images/'+j+'-576.jpg 1x,\
+						/uploads/'+element.id+'/images/'+j+'-768.jpg 2x\
+						');
+				}
+				else {
+					cloneelem.children[0].setAttribute('srcset','https://98.img.avito.st/208x156/'+element.images[j]+'.jpg 1x, https://98.img.avito.st/640x480/'+element.images[j]+'.jpg 2x');
+				}
+				j++;
+				cloneelem.children[1].setAttribute('alt',element.name);
+				cloneelem.children[1].setAttribute('title',element.name);
+			});
+			// or clone.id = ""; if the divs don't need an ID
+			original.parentNode.appendChild(clone);
 
-		addGallery('gallery'+imgArr[0], imgArr);
-		reserveCar('#'+clone.id+' .reserve-btn', name, year, priceFormated)
+			addGallery('gallery'+element.id, element.images, element.id, element.countImages);
+			reserveCar('#'+clone.id+' .reserve-btn', element.name, element.year, priceFormated)
 
-		models.push(name.split(" ")[0]);
-		prices.push(price);
-		years.push(year);
+			models.push(element.name.split(" ")[0]);
+			prices.push(element.price);
+			years.push(element.year);
+		}
+		// cars.forEach(function(element) {
+			// duplicate(element);
+		// });
+		// original.classList.remove('hide');
+		original.parentNode.removeChild(original);
 	}
-	cars.forEach(function(element) {
-		duplicate(element.images, element.name, element.year, element.price, element.params);
+	/* create cars list with js end */
+
+	/* when we created list car at php */
+	$$('.kdx-ui-list__cell').forEach(function(element) {
+		
+		addGallery(
+			element.querySelector('.item-slider').getAttribute('data-fancybox-trigger'), 
+			element.querySelector('.item-slider').getAttribute('data-images'),
+			element.querySelector('.item').getAttribute('id'), 
+			element.querySelector('.item-slider').getAttribute('data-count'),
+			element.querySelector('.item-slider').getAttribute('data-avito')
+		);
+		reserveCar(
+			'#'+element.getAttribute('id')+' .reserve-btn', 
+			element.querySelector('.replace-name').textContent
+				.replace(/[\n\r]+|[\s]{2,}/g, ' ').trim(),
+			element.querySelector('.replace-year').innerText,
+			element.querySelector('.replace-price').innerText
+		);
+		reserveCar(
+			'#'+element.getAttribute('id')+' .replace-name', 
+			element.querySelector('.replace-name').textContent
+				.replace(/[\n\r]+|[\s]{2,}/g, ' ').trim(),
+			element.querySelector('.replace-year').innerText,
+			element.querySelector('.replace-price').innerText
+		);
+		element.addEventListener('click', function(t) {
+
+		});
 	});
-	// original.classList.remove('hide');
-	original.parentNode.removeChild(original);
-	/* create cars list end */
+
 	setLocation();
 
 	/**
@@ -118,6 +159,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	/* скрипт для того чтобы спарсить авито */
 	if(location.host == 'www.avito.ru')	{
+		const copyToClipboard = str => {
+			const el = document.createElement('textarea');
+			el.value = str;
+			el.setAttribute('readonly', '');
+			el.style.position = 'absolute';
+			el.style.left = '-9999px';
+			document.body.appendChild(el);
+			el.select();
+			document.execCommand('copy');
+			document.body.removeChild(el);
+		};
 		var cars = [];
 		$$('.catalog_table .item__line').forEach(function(element) {
 			var name_year = element.querySelector('span[itemprop="name"]').innerText;
@@ -134,6 +186,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 
 		JSON.stringify(cars);
+		copyToClipboard(JSON.stringify(cars));
 		window.prompt("Copy to clipboard: Ctrl+C (CMD+C), Enter", JSON.stringify(cars));
 		console.log(JSON.stringify(cars));
 	}
@@ -154,6 +207,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			  },
 			  baseClass: "fancybox-slide--map",
 		    afterShow : function(instance, current) {
+		    	ym('55810999', 'reachGoal', 'show_map');
+		    	ym('55834846', 'reachGoal', 'show_map');
 		        ymaps.ready(init);
 		        var map,
 		            placemark;
@@ -174,39 +229,61 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 
-	function addGallery(fancyboxid, imgArr) {
+	function addGallery(fancyboxid, imgArr, id, countImages, avito) {
 		let fancyboxImages = [];
-		imgArr.forEach(function(element) {
-			fancyboxImages.push({ src: 'https://98.img.avito.st/640x480/'+element+'.jpg' });
-		});
+		if(!avito) {
+			let i = 0;
+			while (i <= countImages) { // выводит 0, затем 1, затем 2
+				fancyboxImages.push({ src: '/uploads/'+id+'/images/'+i+'-1920x1280.jpg' });
+				i++;
+			}
+		} else {
+			imgArr = imgArr.split(',');
+			imgArr.forEach(function(element) {
+				fancyboxImages.push({ src: 'https://98.img.avito.st/1280x960/'+element+'.jpg' });
+			});
+		}
 		$('[data-fancybox-trigger="'+fancyboxid+'"]').on('click', function() {
 		  $.fancybox.open(fancyboxImages, {
-			    loop : true
+			    loop : true,
+			    afterShow : function(instance, current) {
+			    	ym('55810999', 'reachGoal', 'watch_gallery');
+			    	ym('55834846', 'reachGoal', 'watch_gallery');
+		    	}
 		  });
 		})
 	}
 
 	function reserveCar(selector, name, year, price) {
-		$(selector).on('click', function() {
-		  $.fancybox.open({
-		    src  : '#reserve',
-		    type : 'inline',
-		    opts : {
-		      afterShow : function( instance, current ) {
-		        console.info(['show', instance, current]);
-		      },
-		      beforeClose : function( instance, current, e ) {
-			      	console.info(['close', instance, current, e]);
-							// return false;
-					}
-		    }
-		  });
-		  $("#contact").submit(function() { console.info('submit'); return false; });
-		});
+	    $(selector).on('click', function() {
+	    	$("#reserve").find('.car').html(name);
+	        $("#contact").find('#carname').attr('value',name);
+	        $("#contact").find('#caryear').attr('value',year);
+	        $("#contact").find('#carprice').attr('value',price);
+	        $.fancybox.open({
+	            src: '#reserve',
+	            type: 'inline',
+	            opts: {
+	                afterShow: function(instance, current) {
+	                    // console.info(['show', instance, current]);
+	                    ym('55810999', 'reachGoal', 'leed_form_open');
+	                    ym('55834846', 'reachGoal', 'leed_form_open');
+	                },
+	                beforeClose: function(instance, current, e) {
+	                    // console.info(['close', instance, current, e]);
+	                    // return false;
+	                }
+	            }
+	        });
+	        $("#contact").submit(function() {
+	            return false;
+	        });
+	    });
 	}
 
+
 	// $(function() {
-  function validateEmail(email) { 
+	function validateEmail(email) { 
 		var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		return reg.test(email);
 	}
@@ -215,47 +292,96 @@ document.addEventListener("DOMContentLoaded", function() {
     return reg.test(email);
 	}
 	function checkPhone (phone) {
-		// var reg = /\+7 \(\d{3}\) \d{3}-?\d{1}-?\d{1}-?\d{1}-?\d{1}/;
-		// return reg.test(phone);
-		return true;
+		var reg = /\+7 \(?\d{3}\)? \d{3}-?\d{2}-?\d{2}/;
+		return reg.test(phone);
+		// return true;
 	}
 
-	$(document).ready(function() {		
+	function getCookie(name) {
+	  var matches = document.cookie.match(new RegExp(
+	    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+	  ))
+	  return matches ? decodeURIComponent(matches[1]) : undefined
+	}
+	function setCookie(name, value, props) {
+	    props = props || {}
+	    console.log(props);
+	    var exp = props.expires
+	    if (typeof exp == "number" && exp) {
+	        var d = new Date()
+	        d.setTime(d.getTime() + exp*1000)
+	        exp = props.expires = d
+	    }
+	    if(exp && exp.toUTCString) { props.expires = exp.toUTCString() }
+	    value = encodeURIComponent(value)
+	    var updatedCookie = name + "=" + value
+	    for(var propName in props){
+	        updatedCookie += "; " + propName
+	        var propValue = props[propName]
+	        if(propValue !== true){ updatedCookie += "=" + propValue }
+	    	console.log(updatedCookie);
+	    }
+	    document.cookie = updatedCookie
+	}
+
+	$$$('#inputPhone').addEventListener('input', function (e) {
+		// var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+		// e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+		var num = this.value.replace( '+7' , '' ).replace( /\D/g, '' ).split( /(?=.)/ ), i = num.length;
+        if ( 0 <= i ) num.unshift( '+7' );
+        if ( 1 <= i ) num.splice( 1, 0, ' ' );
+        if ( 4 <= i ) num.splice( 5, 0, ' ' );
+        if ( 7 <= i ) num.splice( 9, 0, '-' );
+        if ( 9 <= i ) num.splice( 12, 0, '-' );
+        if ( 11 <= i ) num.splice( 15, num.length - 15 );
+        this.value = num.join( '' );
+	});
+
+	$(document).ready(function() {
 		$("#send").on("click", function(){
 			var nameval  = $("#inputName").val();
 			var phoneval    = $("#inputPhone").val();
 			var agreeval    = $("#politikaCheckbox").prop('checked');
 			var namelen    = nameval.length;
+			var phonelen    = phoneval.length;
 			var phonevalid = checkPhone(phoneval);
 			
-			if(phonevalid == false) {
-				$("#inputName").addClass("error");
+			if(phonevalid == false && phonelen < 16) {
+				$("#inputPhone").addClass("is-invalid");
+				$("#inputPhone").removeClass("is-valid");
 			}
 			else if(phonevalid == true){
-				$("#inputName").removeClass("error");
+				$("#inputPhone").addClass("is-valid");
+				$("#inputPhone").removeClass("is-invalid");
 			}
 			
-			if(namelen < 4) {
-				$("#inputPhone").addClass("error");
+			if(namelen < 1) {
+				$("#inputName").addClass("is-invalid");
+				$("#inputName").removeClass("is-valid");
 			}
-			else if(namelen >= 4){
-				$("#inputPhone").removeClass("error");
+			else if(namelen >= 1){
+				$("#inputName").addClass("is-valid");
+				$("#inputName").removeClass("is-invalid");
 			}
 			
-			if(phonevalid == true && namelen >= 4 && agreeval) {
+			if(phonevalid == true && namelen >= 1 && agreeval) {
 				// если обе проверки пройдены
+				ym('55810999', 'reachGoal', 'leed_form_sent');
+				ym('55834846', 'reachGoal', 'leed_form_sent');
 				// сначала мы скрываем кнопку отправки
 				$("#submit").replaceWith("<em>отправка...</em>");
-				
+				$("#politikaCheckbox").attr('value', agreeval);
 				$.ajax({
 					type: 'POST',
 					url: 'mail.php',
 					data: $("#contact").serialize(),
 					success: function(data) {
 						if(data == "true") {
+							ym('55810999', 'reachGoal', 'leed_form');
+				            ym('55834846', 'reachGoal', 'leed_form');
 							$("#contact").fadeOut("fast", function(){
 								$(this).before("<p><strong>Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.</strong></p>");
-								console.info('fadeOut');
+								// console.info('fadeOut');
 								setTimeout("$.fancybox.close()", 2000);
 							});
 						}
@@ -263,5 +389,28 @@ document.addEventListener("DOMContentLoaded", function() {
 				});
 			}
 		});
+
+		//cookie popup
+        var cookieLink  = $('.cookie-more'),
+            cookieAgree = $('.cookie-agree'),
+            cookieMain  = $('.cookie');
+
+        $(window).on('load', function() {
+            if (!getCookie('cookieAreShown')) {
+                cookieMain.addClass('is-show');
+            }
+        });
+
+
+        cookieAgree.on('click', function(e) {
+            e.preventDefault();
+            // cookiePopup.fadeOut(400);
+            cookieMain.removeClass('is-show');
+            setTimeout(function() {
+                setCookie('cookieAreShown', true);
+                cookieMain.hide();
+            }, 1200);
+        });
+
 	});
 });
