@@ -125,7 +125,7 @@ function premiumcars_watch() {
 	watch(projects.premiumcars.code.src).on('change', browserSync.reload);
 };
 
-module.exports = parallel(premiumcars_styles, premiumcars_scripts, premiumcars_browsersync, premiumcars_watch);
+exports.premiumcars = parallel(premiumcars_styles, premiumcars_scripts, premiumcars_browsersync, premiumcars_watch);
 
 
 /* premiumcars END */
